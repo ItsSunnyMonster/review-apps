@@ -17,6 +17,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "husky": "^7.0.4"
+    "husky": "^9.1.3"
   }
 }

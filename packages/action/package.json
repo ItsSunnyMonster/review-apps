@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/mustache": "^4.1.2",
-    "@vercel/ncc": "^0.33.1",
+    "@vercel/ncc": "^0.38.1",
     "eslint-config-sxd": "^1.1.2",
     "nodemon": "^2.0.4",
     "ts-node": "^10.4.0",

@@ -3,7 +3,7 @@ description: |
   Manages multiple static apps (or review-apps) for each branch in github pages
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'packages/action/dist/index.js'
 
 inputs:
