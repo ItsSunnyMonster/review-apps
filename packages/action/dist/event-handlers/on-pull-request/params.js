@@ -23,6 +23,10 @@ exports.getParams = void 0;
 const github = __importStar(require("@actions/github"));
 function getParams() {
     const payload = github.context.payload;
+    let branchName = payload.pull_request.head.ref;
+    if (branchName.startsWith('refs/heads/')) {
+        branchName = branchName.slice(11);
+    }
     return {
         action: payload.action,
         repository: {
@@ -30,7 +34,7 @@ function getParams() {
             owner: payload.repository.owner.login,
         },
         branch: {
-            name: payload.pull_request.head.ref,
+            name: branchName,
             headCommit: payload.pull_request.head.sha,
             pullRequest: {
                 url: payload.pull_request.html_url,
